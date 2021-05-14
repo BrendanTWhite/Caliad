@@ -15,6 +15,12 @@ class CreateTeamsTable extends Migration
     {
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('club_id')->constrained();
+            $table->foreignId('age_group_id')->constrained();
+            $table->foreignId('team_rank_id')->constrained();
+            $table->foreignId('year_id')->constrained();
+
             $table->timestamps();
         });
     }
