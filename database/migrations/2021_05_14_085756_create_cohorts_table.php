@@ -15,6 +15,13 @@ class CreateCohortsTable extends Migration
     {
         Schema::create('cohorts', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('club_id')->constrained();
+            $table->foreignId('age_group_id')->constrained();
+            $table->foreignId('year_id')->constrained(); 
+
+            $table->foreignId('division_id')->constrained();
+
             $table->timestamps();
         });
     }
