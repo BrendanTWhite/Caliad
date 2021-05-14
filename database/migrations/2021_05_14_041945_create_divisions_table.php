@@ -15,8 +15,26 @@ class CreateDivisionsTable extends Migration
     {
         Schema::create('divisions', function (Blueprint $table) {
             $table->id();
+
+            $table->string('full_name');
+            $table->string('short_name');
+            $table->integer('rank');
+
             $table->timestamps();
         });
+
+        // This is a reference table with data that
+        // rarely if ever changes
+
+        DB::table('divisions')->insert([
+            [ 'rank' => 0, 'short_name' => 'Champs', 'full_name' => 'Championship Division' ],
+            [ 'rank' => 1, 'short_name' => 'Div 1',  'full_name' => 'Division 1' ],
+            [ 'rank' => 2, 'short_name' => 'Div 2',  'full_name' => 'Division 2' ],
+            [ 'rank' => 3, 'short_name' => 'Div 3',  'full_name' => 'Division 3' ],
+            [ 'rank' => 4, 'short_name' => 'Div 4',  'full_name' => 'Division 4' ],
+            [ 'rank' => 5, 'short_name' => 'Div 5',  'full_name' => 'Division 5' ],
+        ]);
+
     }
 
     /**
