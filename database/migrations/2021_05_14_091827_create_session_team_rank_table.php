@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCompetitionTeamRankTable extends Migration
+class CreateSessionTeamRankTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateCompetitionTeamRankTable extends Migration
      */
     public function up()
     {
-        Schema::create('competition_team_rank', function (Blueprint $table) {
+        Schema::create('session_team_rank', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('competition_id')->constrained();
+            $table->foreignId('session_id')->constrained();
             $table->foreignId('team_rank_id')->constrained();
 
             $table->timestamps();
@@ -30,6 +30,6 @@ class CreateCompetitionTeamRankTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('competition_team_rank');
+        Schema::dropIfExists('session_team_rank');
     }
 }

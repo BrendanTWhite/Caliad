@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CompItem;
+use App\Models\SessionItem;
 use Illuminate\Http\Request;
 
-class CompItemController extends Controller
+class SessionItemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class CompItemController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\CompItem  $compItem
+     * @param  \App\Models\SessionItem  $sessionItem
      * @return \Illuminate\Http\Response
      */
-    public function show(CompItem $compItem)
+    public function show(SessionItem $sessionItem)
     {
         //
     }
@@ -52,10 +52,10 @@ class CompItemController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\CompItem  $compItem
+     * @param  \App\Models\SessionItem  $sessionItem
      * @return \Illuminate\Http\Response
      */
-    public function edit(CompItem $compItem)
+    public function edit(SessionItem $sessionItem)
     {
         //
     }
@@ -64,10 +64,10 @@ class CompItemController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\CompItem  $compItem
+     * @param  \App\Models\SessionItem  $sessionItem
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, CompItem $compItem)
+    public function update(Request $request, SessionItem $sessionItem)
     {
         //
     }
@@ -75,10 +75,10 @@ class CompItemController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\CompItem  $compItem
+     * @param  \App\Models\SessionItem  $sessionItem
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CompItem $compItem)
+    public function destroy(SessionItem $sessionItem)
     {
         //
     }
