@@ -18,6 +18,7 @@ class CreateItemTypesTable extends Migration
 
             $table->string('name');
             $table->integer('sequence');
+            $table->boolean('has_music_title');
 
             $table->timestamps();
         });
@@ -27,9 +28,9 @@ class CreateItemTypesTable extends Migration
         // rarely if ever changes
 
         DB::table('item_types')->insert([
-            [ 'sequence' => 100, 'name' => 'Core' ],
-            [ 'sequence' => 200, 'name' => 'Fancy' ],
-            [ 'sequence' => 300, 'name' => 'Solos / Duos' ],
+            [ 'sequence' => 100, 'has_music_title' => FALSE, 'name' => 'Core' ],
+            [ 'sequence' => 200, 'has_music_title' => TRUE,  'name' => 'Fancy' ],
+            [ 'sequence' => 300, 'has_music_title' => TRUE,  'name' => 'Solos / Duos' ],
         ]);
 
     }
