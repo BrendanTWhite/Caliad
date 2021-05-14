@@ -15,8 +15,25 @@ class CreateSeasonsTable extends Migration
     {
         Schema::create('seasons', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('year_id')->constrained();
+
+            $table->string('name');
+            $table->date('start_date');
+            $table->date('end_date');
+
             $table->timestamps();
         });
+
+        // This is NOT a reference table 
+        // however I'm going to insert the first record
+
+        DB::table('seasons')->insert([
+             'year_id'    => 2, // this is 2021
+             'name'       => 'May 2021 Competitions', 
+             'start_date' => '2021-05-10', 
+             'end_date'   => '2021-05-28',
+        ]);
     }
 
     /**
