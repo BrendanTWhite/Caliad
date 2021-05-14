@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSeasonsTable extends Migration
+class CreateCompetitionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateSeasonsTable extends Migration
      */
     public function up()
     {
-        Schema::create('seasons', function (Blueprint $table) {
+        Schema::create('competitions', function (Blueprint $table) {
             $table->id();
 
             $table->foreignId('year_id')->constrained();
@@ -28,7 +28,7 @@ class CreateSeasonsTable extends Migration
         // This is NOT a reference table 
         // however I'm going to insert the first record
 
-        DB::table('seasons')->insert([
+        DB::table('competitions')->insert([
              'year_id'    => 2, // this is 2021
              'name'       => 'May 2021 Competitions', 
              'start_date' => '2021-05-10', 
@@ -43,6 +43,6 @@ class CreateSeasonsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('seasons');
+        Schema::dropIfExists('competitions');
     }
 }

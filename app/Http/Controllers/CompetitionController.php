@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Season;
+use App\Models\Competition;
 use Illuminate\Http\Request;
 
-class SeasonController extends Controller
+class CompetitionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class SeasonController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Season  $season
+     * @param  \App\Models\Competition  $competition
      * @return \Illuminate\Http\Response
      */
-    public function show(Season $season)
+    public function show(Competition $competition)
     {
         //
     }
@@ -52,10 +52,10 @@ class SeasonController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Season  $season
+     * @param  \App\Models\Competition  $competition
      * @return \Illuminate\Http\Response
      */
-    public function edit(Season $season)
+    public function edit(Competition $competition)
     {
         //
     }
@@ -64,10 +64,10 @@ class SeasonController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Season  $season
+     * @param  \App\Models\Competition  $competition
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Season $season)
+    public function update(Request $request, Competition $competition)
     {
         //
     }
@@ -75,10 +75,10 @@ class SeasonController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Season  $season
+     * @param  \App\Models\Competition  $competition
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Season $season)
+    public function destroy(Competition $competition)
     {
         //
     }

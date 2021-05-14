@@ -17,7 +17,7 @@ class CreateSessionsTable extends Migration
             $table->id();
 
             $table->foreignId('age_group_id')->constrained();
-            $table->foreignId('season_id')->constrained();
+            $table->foreignId('competition_id')->constrained();
 
             $table->dateTime('start');
 

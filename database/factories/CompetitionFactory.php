@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Season;
+use App\Models\Competition;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class SeasonFactory extends Factory
+class CompetitionFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Season::class;
+    protected $model = Competition::class;
 
     /**
      * Define the model's default state.

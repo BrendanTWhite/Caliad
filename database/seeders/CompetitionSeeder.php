@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class SeasonSeeder extends Seeder
+class CompetitionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
