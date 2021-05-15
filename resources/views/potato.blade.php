@@ -9,7 +9,10 @@
 
 
 
-
+  <!-- Header -->
+  <div class="mt-10 max-w-screen-xl mx-auto px-10">
+    <h2 class="text-gray-900 text-2xl font-bold leading-snug"> This is a Header </h2>
+  </div>
 
 
 
