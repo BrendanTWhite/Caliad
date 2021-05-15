@@ -29,10 +29,19 @@ class CreateCompetitionsTable extends Migration
         // however I'm going to insert the first record
 
         DB::table('competitions')->insert([
-             'year_id'    => 2, // this is 2021
-             'name'       => 'May 2021 Competitions', 
-             'start_date' => '2021-05-10', 
-             'end_date'   => '2021-05-28',
+
+            [
+                'year_id'    => 2, // this is 2021
+                'name'       => 'May 2021 Competitions', 
+                'start_date' => '2021-05-10', 
+                'end_date'   => '2021-05-28',
+            ], [
+                'year_id'    => 2, // this is 2021
+                'name'       => '2021 State Championship', 
+                'start_date' => '2021-07-30', 
+                'end_date'   => '2021-08-29',
+            ]
+
         ]);
     }
 
