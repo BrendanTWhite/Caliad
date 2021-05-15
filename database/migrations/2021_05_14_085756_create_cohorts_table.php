@@ -18,7 +18,9 @@ class CreateCohortsTable extends Migration
 
             $table->foreignId('club_id')->constrained();
             $table->foreignId('age_group_id')->constrained();
-            $table->foreignId('year_id')->constrained(); 
+            $table->foreignId('year_id')->constrained();
+
+            $table->unique(['club_id', 'age_group_id', 'year_id']);
 
             $table->foreignId('division_id')->constrained();
 

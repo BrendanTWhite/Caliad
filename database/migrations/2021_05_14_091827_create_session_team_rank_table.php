@@ -19,6 +19,8 @@ class CreateSessionTeamRankTable extends Migration
             $table->foreignId('session_id')->constrained();
             $table->foreignId('team_rank_id')->constrained();
 
+            $table->unique(['session_id', 'team_rank_id']);
+
             $table->timestamps();
         });
 
@@ -83,7 +85,7 @@ class CreateSessionTeamRankTable extends Migration
             [ 'session_id' =>  39, 'team_rank_id' => 2 ],
             [ 'session_id' =>  40, 'team_rank_id' => 2 ],
             [ 'session_id' =>  41, 'team_rank_id' => 2 ],
-            [ 'session_id' =>  41, 'team_rank_id' => 2 ],
+//            [ 'session_id' =>  41, 'team_rank_id' => 2 ],
 
             [ 'session_id' =>  27, 'team_rank_id' => 3 ],
             [ 'session_id' =>  28, 'team_rank_id' => 2 ],

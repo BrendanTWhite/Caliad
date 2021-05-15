@@ -19,6 +19,8 @@ class CreateSessionItemsTable extends Migration
             $table->foreignId('session_id')->constrained();
             $table->foreignId('item_id')->constrained();
 
+            $table->unique(['session_id', 'item_id']);
+
             $table->integer('sequence');
 
             $table->timestamps();
