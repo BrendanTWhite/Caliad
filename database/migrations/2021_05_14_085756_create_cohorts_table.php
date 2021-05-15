@@ -27,7 +27,7 @@ class CreateCohortsTable extends Migration
 
         // This is NOT a reference table 
         // however I'm going to insert the cohorts
-        // from the May comps anyway
+        // from 2020 and 2021 anyway
 
         DB::table('cohorts')->insert([
 
