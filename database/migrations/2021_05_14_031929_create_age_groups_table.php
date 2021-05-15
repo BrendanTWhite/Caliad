@@ -33,6 +33,7 @@ class CreateAgeGroupsTable extends Migration
             [ 'sequence' => 150, 'name' => 'Intermediates' ],
             [ 'sequence' => 160, 'name' => 'Seniors' ],
             [ 'sequence' => 170, 'name' => 'Masters' ],
+            [ 'sequence' => 500, 'name' => 'All' ],
         ]);
 
     }

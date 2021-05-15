@@ -33,6 +33,7 @@ class CreateDivisionsTable extends Migration
             [ 'id' => 103, 'rank' => 3, 'short_name' => 'Div 3',  'full_name' => 'Division 3' ],
             [ 'id' => 104, 'rank' => 4, 'short_name' => 'Div 4',  'full_name' => 'Division 4' ],
             [ 'id' => 105, 'rank' => 5, 'short_name' => 'Div 5',  'full_name' => 'Division 5' ],
+            [ 'id' =>  99, 'rank' => 99, 'short_name' => 'All',  'full_name' => 'All Divisions' ],
         ]);
 
     }
