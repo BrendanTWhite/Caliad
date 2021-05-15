@@ -27,6 +27,7 @@ class CreateSessionTeamRankTable extends Migration
         // May 2021 comps anyway.
 
       DB::table('session_team_rank')->insert([
+
             [ 'session_id' =>   1, 'team_rank_id' => 3 ],
             [ 'session_id' =>   1, 'team_rank_id' => 4 ],
             [ 'session_id' =>  10, 'team_rank_id' => 1 ],
@@ -66,6 +67,33 @@ class CreateSessionTeamRankTable extends Migration
             [ 'session_id' =>   8, 'team_rank_id' => 2 ],
             [ 'session_id' =>   8, 'team_rank_id' => 3 ],
             [ 'session_id' =>   9, 'team_rank_id' => 1 ],
+
+            [ 'session_id' =>  27, 'team_rank_id' => 2 ],
+            [ 'session_id' =>  28, 'team_rank_id' => 1 ],
+            [ 'session_id' =>  29, 'team_rank_id' => 1 ],
+            [ 'session_id' =>  30, 'team_rank_id' => 1 ],
+            [ 'session_id' =>  31, 'team_rank_id' => 2 ],
+            [ 'session_id' =>  32, 'team_rank_id' => 3 ],
+            [ 'session_id' =>  33, 'team_rank_id' => 1 ],
+            [ 'session_id' =>  34, 'team_rank_id' => 1 ],
+            [ 'session_id' =>  35, 'team_rank_id' => 1 ],
+            [ 'session_id' =>  36, 'team_rank_id' => 1 ],
+            [ 'session_id' =>  37, 'team_rank_id' => 1 ],
+            [ 'session_id' =>  38, 'team_rank_id' => 1 ],
+            [ 'session_id' =>  39, 'team_rank_id' => 2 ],
+            [ 'session_id' =>  40, 'team_rank_id' => 2 ],
+            [ 'session_id' =>  41, 'team_rank_id' => 2 ],
+            [ 'session_id' =>  41, 'team_rank_id' => 2 ],
+
+            [ 'session_id' =>  27, 'team_rank_id' => 3 ],
+            [ 'session_id' =>  28, 'team_rank_id' => 2 ],
+            [ 'session_id' =>  29, 'team_rank_id' => 2 ],
+            [ 'session_id' =>  30, 'team_rank_id' => 2 ],
+            [ 'session_id' =>  31, 'team_rank_id' => 3 ],
+            [ 'session_id' =>  32, 'team_rank_id' => 4 ],
+
+            [ 'session_id' =>  27, 'team_rank_id' => 4 ],                                    
+
         ]);
 
     }
