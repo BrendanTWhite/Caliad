@@ -14,7 +14,7 @@ class CompetitionController extends Controller
      */
     public function index()
     {
-        //
+        return view('competitions.list', ['competitions' => Competition::all()]);
     }
 
     /**

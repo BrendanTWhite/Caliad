@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CompetitionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +25,7 @@ Route::get('/dashboard', function () {
 Route::get('/potato', function () {
     return view('potato');
 })->middleware(['auth'])->name('potato');
+
+Route::resource('competitions', CompetitionController::class);
 
 require __DIR__.'/auth.php';
