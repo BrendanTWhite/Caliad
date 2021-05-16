@@ -14,9 +14,9 @@
   <div class="mt-10 max-w-screen-xl mx-auto px-10">
     <h2 class="text-gray-900 text-2xl font-bold leading-snug"> 
       {{ $competition->name }} 
-      <span class="text-sm">
+      <div class="text-sm">
         {{ $competition->start_date->toFormattedDateString() }} - {{ $competition->end_date->toFormattedDateString() }} 
-      </span>
+      </div>
     </h2>
   </div>
 
