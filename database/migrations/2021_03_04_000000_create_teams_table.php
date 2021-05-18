@@ -17,6 +17,7 @@ class CreateTeamsTable extends Migration
             $table->id();
 
             $table->foreignId('cohort_id')->constrained();
+            
             $table->foreignId('team_rank_id')->constrained();
 
             $table->unique(['cohort_id', 'team_rank_id']);

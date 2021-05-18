@@ -19,6 +19,8 @@ class CreateRoutinesTable extends Migration
             $table->foreignId('section_id')->constrained();
             $table->foreignId('team_id')->constrained();
 
+            $table->foreignId('item_id')->constrained();
+
             $table->integer('sequence');
             $table->string('music_title');
             $table->dateTime('start')->nullable();
