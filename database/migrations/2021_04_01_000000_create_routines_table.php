@@ -17,7 +17,6 @@ class CreateRoutinesTable extends Migration
             $table->id();
 
             $table->foreignId('team_id')->constrained();
-            $table->foreignId('session_item_id')->constrained();
 
             $table->integer('sequence');
             $table->string('music_title');
@@ -31,7 +30,7 @@ class CreateRoutinesTable extends Migration
         // This is NOT a reference table 
         // however I'm going to insert the data for the 
         // May 2021 comps anyway.
-
+/*
       DB::table('routines')->insert([
             [ 'session_item_id' => 1, 'team_id' => 21, 'sequence' => 1, 'music_title' => '' ],
             [ 'session_item_id' => 1, 'team_id' => 123, 'sequence' => 2, 'music_title' => '' ],
@@ -469,7 +468,7 @@ class CreateRoutinesTable extends Migration
             [ 'session_item_id' => 78, 'team_id' => 22, 'sequence' => 6, 'music_title' => 'Get served' ],   
         ]);
 
-
+*/
     }
 
     /**
