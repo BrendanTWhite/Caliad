@@ -25,15 +25,15 @@ class CreateRegionsTable extends Migration
         // rarely if ever changes
 
         DB::table('regions')->insert([
-            [ 'id' => 1, 'name' => 'Adelaide Hills' ],
-            [ 'id' => 2, 'name' => 'Country North' ],
-            [ 'id' => 3, 'name' => 'Metropolitan East' ],
-            [ 'id' => 4, 'name' => 'Metropolitan South' ],
-            [ 'id' => 5, 'name' => 'Metropolitan South West' ],
-            [ 'id' => 6, 'name' => 'Metropolitan North West' ],
-            [ 'id' => 7, 'name' => 'Regional' ],
-            [ 'id' => 8, 'name' => 'Metropolitan North' ],
-            [ 'id' => 9, 'name' => 'Metropolitan North East' ],
+            [ 'id' => 1,  'name' => 'Adelaide Hills' ],
+            [ 'id' => 2,  'name' => 'Country North' ],
+            [ 'id' => 3,  'name' => 'Metropolitan East' ],
+            [ 'id' => 4,  'name' => 'Metropolitan South' ],
+            [ 'id' => 5,  'name' => 'Metropolitan South West' ],
+            [ 'id' => 6,  'name' => 'Metropolitan North West' ],
+            [ 'id' => 7,  'name' => 'Regional' ],
+            [ 'id' => 8,  'name' => 'Metropolitan North' ],
+            [ 'id' => 9,  'name' => 'Metropolitan North East' ],
             [ 'id' => 10, 'name' => 'Metropolitan Outer South' ],
             [ 'id' => 11, 'name' => 'Metropolitan West' ],
         ]);
