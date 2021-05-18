@@ -9,6 +9,8 @@ class Session extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['start', 'competition_id'];
+
 
     public function competition()
     {
