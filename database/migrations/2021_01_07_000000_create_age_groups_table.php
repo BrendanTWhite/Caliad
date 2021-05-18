@@ -17,7 +17,7 @@ class CreateAgeGroupsTable extends Migration
             $table->id();
 
             $table->string('name');
-            $table->integer('sequence');
+            $table->integer('sort_order');
 
             $table->timestamps();
         });
@@ -26,14 +26,14 @@ class CreateAgeGroupsTable extends Migration
         // rarely if ever changes
 
         DB::table('age_groups')->insert([
-            [ 'sequence' => 110, 'name' => 'Non Competitive Tinies ' ],
-            [ 'sequence' => 120, 'name' => 'Competitive Tinies ' ],
-            [ 'sequence' => 130, 'name' => 'Sub Juniors ' ],
-            [ 'sequence' => 140, 'name' => 'Juniors' ],
-            [ 'sequence' => 150, 'name' => 'Intermediates' ],
-            [ 'sequence' => 160, 'name' => 'Seniors' ],
-            [ 'sequence' => 170, 'name' => 'Masters' ],
-            [ 'sequence' => 500, 'name' => 'All' ],
+            [ 'sort_order' => 110, 'name' => 'Non Competitive Tinies ' ],
+            [ 'sort_order' => 120, 'name' => 'Competitive Tinies ' ],
+            [ 'sort_order' => 130, 'name' => 'Sub Juniors ' ],
+            [ 'sort_order' => 140, 'name' => 'Juniors' ],
+            [ 'sort_order' => 150, 'name' => 'Intermediates' ],
+            [ 'sort_order' => 160, 'name' => 'Seniors' ],
+            [ 'sort_order' => 170, 'name' => 'Masters' ],
+            [ 'sort_order' => 500, 'name' => 'All' ],
         ]);
 
     }
