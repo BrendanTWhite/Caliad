@@ -14,7 +14,16 @@ class CompetitionController extends Controller
      */
     public function index()
     {
-        return view('competitions.list', ['competitions' => Competition::all()]);
+        return view('competitions.list', [
+            'competitions' => Competition::with([
+                'sessions', 
+                'sessions.divisions',
+                'sessions.team_ranks',
+                'sessions.regions',
+                'sessions.items',
+                'sessions.age_groups',
+            ])->get()
+        ]);
     }
 
     /**

@@ -28,25 +28,25 @@
 >
   
   
-  
+   @foreach ($competition->sessions as $session)
   <!-- Grid column -->
   <div class="flex flex-col flex-1 px-10 py-12 bg-white rounded-lg shadow-lg">
     <div class="flex-1">
       <h2 class="text-gray-900 text-2xl font-bold leading-snug">
-        One
+        {{ $session->start->toDayDateTimeString() }} 
       </h2>
       <p class="mt-2 text-lg">
-        One.
+        {{ $session->description() }} 
       </p>
     </div>
     <a
       href="#"
       class="mt-6 inline-block px-6 py-3 text-center text-white font-semibold bg-blue-700 rounded-md shadow-sm"
     >
-      One
+      Open
     </a>
   </div>
-
+@endforeach
 
   
   
