@@ -5,8 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Routine;
 use Illuminate\Http\Request;
 
+use Carbon\Carbon;
+
 use App\Models\Competition;
 use App\Models\Session;
+use App\Models\Section;
+use App\Models\Club;
 
 class RoutineController extends Controller
 {
@@ -18,7 +22,7 @@ class RoutineController extends Controller
     public function index()
     { global $headers;
 
-        $path = base_path('doco/import.csv');
+        $path = base_path('doco/caliad.csv');
 
         $csv = collect(array_map('str_getcsv', file($path))); 
 
@@ -35,12 +39,33 @@ class RoutineController extends Controller
             //dd($row); // collection/array of a row of data
             //dd($row['comp-id']); // the competition id, eg 2
 
-            $competition = Competition::find($row['comp-id']);
 
-            $session = Session::firstOrCreate([
-                'competition_id' => $competition->id,
-                'start' => '2021-01-01 01:00:00',
-            ]);
+            if ($row && $row['comp-id'] != '') 
+            { 
+                     
+                $competition = Competition::find($row['comp-id']);     
+
+                $session = Session::firstOrCreate([
+                    'competition_id' => $competition->id,
+                    'start' => new Carbon($row['session-start']),
+                ]);
+
+                $section = Section::firstOrCreate([
+                    'session_id' => $session->id,
+                    'sequence'    => $row['ItemSeq'],
+                ]);
+
+                $club = Club::where('short_name',$row['ClubSlug'])->first();
+                if (!$club) { dd("can't find club with short_name >".$row['ClubSlug']."<"); }
+
+                $cohort = '';
+
+                $team = '';
+
+                $routine = '';
+
+            }
+
         }
 
 

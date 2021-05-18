@@ -53,7 +53,7 @@ class CreateClubsTable extends Migration
             ], [
                 'region_id'  => 1, 
                 'full_name'  => 'Innovation Calisthenics Club Incorporated', 
-                'short_name' => 'Innovation ', 
+                'short_name' => 'Innovation',
                 'contact'    => 'Principal Coach Kate Loveridge ph 0409 270 877', 
                 'email'      => 'innovationcalisthenics@hotmail.com', 
                 'location'   => '', 
@@ -61,7 +61,7 @@ class CreateClubsTable extends Migration
             ], [
                 'region_id'  => 1, 
                 'full_name'  => 'Murray Bridge Calisthenics Club', 
-                'short_name' => 'Murray Bridge ', 
+                'short_name' => 'Murray Bridge', 
                 'contact'    => 'Leanne : 0407976635', 
                 'email'      => 'murraybridgecalisthenicsclub@outlook.com', 
                 'location'   => 'Murray Bridge', 
@@ -85,7 +85,7 @@ class CreateClubsTable extends Migration
             ], [
                 'region_id'  => 3, 
                 'full_name'  => 'AVV Millennium Calisthenics and Dance Academy', 
-                'short_name' => 'AVV Millennium ', 
+                'short_name' => 'AVV Millennium', 
                 'contact'    => 'Karen Costanzo: 0438999367', 
                 'email'      => 'Karen.costanzo1@gmail.com', 
                 'location'   => '', 
@@ -93,7 +93,7 @@ class CreateClubsTable extends Migration
             ], [
                 'region_id'  => 3, 
                 'full_name'  => 'Burnside Calisthenics & Dance Academy', 
-                'short_name' => 'Burnside ', 
+                'short_name' => 'Burnside', 
                 'contact'    => 'Vicki on 0426 259 957', 
                 'email'      => 'secretary@burnsideacademy.com.au', 
                 'location'   => 'Unit 2, 20 Fullarton Road Norwood', 
@@ -101,7 +101,7 @@ class CreateClubsTable extends Migration
             ], [
                 'region_id'  => 3, 
                 'full_name'  => 'Marden Calisthenics', 
-                'short_name' => 'Marden ', 
+                'short_name' => 'Marden', 
                 'contact'    => 'Nikki Ianunzio 0412 711 716', 
                 'email'      => 'nicktrick82@gmail.com', 
                 'location'   => 'St Josephs Hectorville', 
@@ -124,8 +124,8 @@ class CreateClubsTable extends Migration
                 'website'    => 'www.hvcalisthenics.com', 
             ], [
                 'region_id'  => 4, 
-                'full_name'  => 'Reynella-Braeview School of Calisthenics', 
-                'short_name' => 'Reynella-Braeview ', 
+                'full_name'  => 'Reynella Braeview School of Calisthenics', 
+                'short_name' => 'Reynella Braeview', 
                 'contact'    => 'Tamara: 0433255991', 
                 'email'      => 'tamarabuley@hotmail.com', 
                 'location'   => 'Braeview Primary School & Reynella East Primary School', 
@@ -133,7 +133,7 @@ class CreateClubsTable extends Migration
             ], [
                 'region_id'  => 5, 
                 'full_name'  => 'Brighton Calisthenics Club', 
-                'short_name' => 'Brighton ', 
+                'short_name' => 'Brighton', 
                 'contact'    => 'Catherine Tilley - 8298 1766 or 0410 581 048', 
                 'email'      => 'brightoncalisthenics@hotmail.com', 
                 'location'   => 'Brighton Uniting Church, 443 Brighton Rd', 
@@ -149,7 +149,7 @@ class CreateClubsTable extends Migration
             ], [
                 'region_id'  => 5, 
                 'full_name'  => 'Seacliff Calisthenics', 
-                'short_name' => 'Seacliff ', 
+                'short_name' => 'Seacliff', 
                 'contact'    => 'Annette Simpson: 0409 094 977', 
                 'email'      => 'seacliffcalisthenicsclub@gmail.com', 
                 'location'   => 'Seacliff Youth Centre, Yacca Rd, Seacliff', 
@@ -165,7 +165,7 @@ class CreateClubsTable extends Migration
             ], [
                 'region_id'  => 7, 
                 'full_name'  => 'Tonique Studio', 
-                'short_name' => 'Tonique ', 
+                'short_name' => 'Tonique', 
                 'contact'    => 'Tonya: 0407809714, Monique: 0438 255 576', 
                 'email'      => 'toniquestudio@hotmail.com', 
                 'location'   => 'Glenburnie', 
@@ -181,7 +181,7 @@ class CreateClubsTable extends Migration
             ], [
                 'region_id'  => 7, 
                 'full_name'  => 'Krymzon Academy of Calisthenics', 
-                'short_name' => 'Krymzon ', 
+                'short_name' => 'Krymzon', 
                 'contact'    => 'Christiane : 0435 818 549', 
                 'email'      => 'christianeellis87@gmail.com', 
                 'location'   => 'Moorak', 
@@ -261,7 +261,7 @@ class CreateClubsTable extends Migration
             ], [
                 'region_id'  => 8, 
                 'full_name'  => 'Jem Calisthenics College', 
-                'short_name' => 'Jem ', 
+                'short_name' => 'Jem', 
                 'contact'    => 'Sonia - 0417 826 563', 
                 'email'      => 'jemcalisthenics@gmail.com', 
                 'location'   => '4&5 25 Research Rd, Pooraka', 
@@ -285,7 +285,7 @@ class CreateClubsTable extends Migration
             ], [
                 'region_id'  => 8, 
                 'full_name'  => 'Payton Calisthenics College', 
-                'short_name' => 'Payton ', 
+                'short_name' => 'Payton', 
                 'contact'    => 'Dianne Ryan 0412 197 863', 
                 'email'      => 'payton.cali@gmail.com', 
                 'location'   => 'Pooraka Memorial Hall', 
@@ -365,7 +365,7 @@ class CreateClubsTable extends Migration
             ], [
                 'region_id'  => 11, 
                 'full_name'  => 'Seaview Calisthenics College', 
-                'short_name' => 'Seaview ', 
+                'short_name' => 'Seaview', 
                 'contact'    => 'Renee 0439 186 734', 
                 'email'      => 'seaviewcalisthenicscollege@gmail.com', 
                 'location'   => 'Henley Town Hall, Henley Beach', 
