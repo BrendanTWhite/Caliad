@@ -19,6 +19,8 @@ class CreateAgeGroupSectionTable extends Migration
             $table->foreignId('section_id')->constrained();
             $table->foreignId('age_group_id')->constrained();
 
+            $table->unique(['section_id', 'age_group_id']);
+
             $table->timestamps();
         });
     }

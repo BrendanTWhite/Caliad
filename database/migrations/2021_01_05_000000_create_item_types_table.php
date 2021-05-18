@@ -16,8 +16,8 @@ class CreateItemTypesTable extends Migration
         Schema::create('item_types', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name');
-            $table->integer('sort_order');
+            $table->string('name')->unique();
+            $table->integer('sort_order')->unique();
             $table->boolean('has_music_title');
 
             $table->timestamps();

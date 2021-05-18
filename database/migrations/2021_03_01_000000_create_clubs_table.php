@@ -18,12 +18,12 @@ class CreateClubsTable extends Migration
 
             $table->foreignId('region_id')->constrained();
 
-            $table->string('full_name');
-            $table->string('short_name');
-            $table->string('contact');
-            $table->string('email');
-            $table->string('location');
-            $table->string('website');
+            $table->string('full_name')->unique();
+            $table->string('short_name')->unique();
+            $table->string('contact')->nullable();
+            $table->string('email')->nullable();
+            $table->string('location')->nullable();
+            $table->string('website')->nullable();
 
             $table->timestamps();
         });

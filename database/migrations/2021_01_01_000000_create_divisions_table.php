@@ -16,9 +16,9 @@ class CreateDivisionsTable extends Migration
         Schema::create('divisions', function (Blueprint $table) {
             $table->id();
 
-            $table->string('full_name');
-            $table->string('short_name');
-            $table->integer('rank');
+            $table->string('full_name')->unique();
+            $table->string('short_name')->unique();
+            $table->integer('rank')->unique();
 
             $table->timestamps();
         });

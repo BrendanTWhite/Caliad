@@ -19,6 +19,8 @@ class CreateCompetitionTeamRankTable extends Migration
             $table->foreignId('competition_id')->constrained();
             $table->foreignId('team_rank_id')->constrained();
 
+            $table->unique(['competition_id', 'team_rank_id']);
+
             $table->timestamps();
         });
     }

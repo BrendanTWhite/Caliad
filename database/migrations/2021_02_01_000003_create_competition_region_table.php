@@ -19,6 +19,8 @@ class CreateCompetitionRegionTable extends Migration
             $table->foreignId('competition_id')->constrained();
             $table->foreignId('region_id')->constrained();
 
+            $table->unique(['competition_id', 'region_id']);
+
             $table->timestamps();
         });
     }

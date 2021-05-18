@@ -16,8 +16,8 @@ class CreateAgeGroupsTable extends Migration
         Schema::create('age_groups', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name');
-            $table->integer('sort_order');
+            $table->string('name')->unique();
+            $table->integer('sort_order')->unique();
 
             $table->timestamps();
         });

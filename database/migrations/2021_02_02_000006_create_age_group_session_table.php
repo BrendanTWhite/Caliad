@@ -19,6 +19,8 @@ class CreateAgeGroupSessionTable extends Migration
             $table->foreignId('session_id')->constrained();
             $table->foreignId('age_group_id')->constrained();
 
+            $table->unique(['session_id', 'age_group_id']);
+
             $table->timestamps();
         });
     }

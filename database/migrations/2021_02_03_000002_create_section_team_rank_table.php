@@ -19,6 +19,8 @@ class CreateSectionTeamRankTable extends Migration
             $table->foreignId('section_id')->constrained();
             $table->foreignId('team_rank_id')->constrained();
 
+            $table->unique(['section_id', 'team_rank_id']);
+
             $table->timestamps();
         });
     }

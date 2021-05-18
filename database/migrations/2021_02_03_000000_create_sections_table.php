@@ -20,6 +20,8 @@ class CreateSectionsTable extends Migration
 
             $table->integer('sequence');
 
+            $table->unique(['session_id', 'sequence']);
+
             $table->timestamps();
         });
     }

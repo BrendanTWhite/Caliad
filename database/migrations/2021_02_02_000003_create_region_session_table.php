@@ -19,6 +19,8 @@ class CreateRegionSessionTable extends Migration
             $table->foreignId('session_id')->constrained();
             $table->foreignId('region_id')->constrained();
 
+            $table->unique(['session_id', 'region_id']);
+
             $table->timestamps();
         });
     }

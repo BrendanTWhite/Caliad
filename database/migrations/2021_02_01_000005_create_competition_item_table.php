@@ -19,6 +19,8 @@ class CreateCompetitionItemTable extends Migration
             $table->foreignId('competition_id')->constrained();
             $table->foreignId('item_id')->constrained();
 
+            $table->unique(['competition_id', 'item_id']);
+
             $table->timestamps();
         });
     }

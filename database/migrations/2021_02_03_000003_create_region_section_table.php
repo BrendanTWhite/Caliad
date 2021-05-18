@@ -19,6 +19,8 @@ class CreateRegionSectionTable extends Migration
             $table->foreignId('section_id')->constrained();
             $table->foreignId('region_id')->constrained();
 
+            $table->unique(['section_id', 'region_id']);
+
             $table->timestamps();
         });
     }
