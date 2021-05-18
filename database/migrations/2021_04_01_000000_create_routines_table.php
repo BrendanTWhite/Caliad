@@ -16,6 +16,7 @@ class CreateRoutinesTable extends Migration
         Schema::create('routines', function (Blueprint $table) {
             $table->id();
 
+            $table->foreignId('section_id')->constrained();
             $table->foreignId('team_id')->constrained();
 
             $table->integer('sequence');

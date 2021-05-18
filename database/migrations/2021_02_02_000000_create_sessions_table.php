@@ -16,7 +16,6 @@ class CreateSessionsTable extends Migration
         Schema::create('sessions', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('age_group_id')->constrained();
             $table->foreignId('competition_id')->constrained();
 
             $table->dateTime('start');
@@ -30,7 +29,7 @@ class CreateSessionsTable extends Migration
         // however I'm going to insert the sessions for the 
         // May 2021 comps anyway.
 
-        DB::table('sessions')->insert([
+/*        DB::table('sessions')->insert([
 
             [
                 'competition_id' => 1, // May 2021
@@ -309,7 +308,7 @@ class CreateSessionsTable extends Migration
             ],
 
         ]);
-
+*/
     }
 
     /**
