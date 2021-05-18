@@ -14,7 +14,7 @@ class RoutineController extends Controller
      */
     public function index()
     {
-        //
+        return view('routines.list', ['routines' => Routine::all()]);
     }
 
     /**
