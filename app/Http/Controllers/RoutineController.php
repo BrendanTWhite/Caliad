@@ -11,6 +11,9 @@ use App\Models\Competition;
 use App\Models\Session;
 use App\Models\Section;
 use App\Models\Club;
+use App\Models\AgeGroup;
+use App\Models\Division;
+use App\Models\Cohort;
 
 class RoutineController extends Controller
 {
@@ -58,7 +61,20 @@ class RoutineController extends Controller
                 $club = Club::where('short_name',$row['ClubSlug'])->first();
                 if (!$club) { dd("can't find club with short_name >".$row['ClubSlug']."<"); }
 
-                $cohort = '';
+                $age_group = AgeGroup::where('name',$row['Age groups'])->first();
+                if (!$age_group) { dd("can't find age_group with name >".$row['Age groups']."<"); }
+
+                $year = $competition->year;
+
+                $division = Division::where('full_name',$row['DivisionName'])->first();
+                if (!$division) { dd("can't find division with full_name >".$row['DivisionName']."<"); }
+
+                $cohort = Cohort::firstOrCreate([
+                    'club_id'      => $club->id,
+                    'age_group_id' => $age_group->id,
+                    'year_id'      => $year->id,
+                    'division_id'  => $division->id,
+                ]);
 
                 $team = '';
 
