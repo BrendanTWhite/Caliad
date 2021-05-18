@@ -14,6 +14,9 @@ use App\Models\Club;
 use App\Models\AgeGroup;
 use App\Models\Division;
 use App\Models\Cohort;
+use App\Models\Team;
+use App\Models\Item;
+
 
 class RoutineController extends Controller
 {
@@ -76,9 +79,21 @@ class RoutineController extends Controller
                     'division_id'  => $division->id,
                 ]);
 
-                $team = '';
+                $team = Team::firstOrCreate([
+                    'cohort_id'    => $cohort->id,
+                    'team_rank_id' => $row['Team'],
+                ]);
 
-                $routine = '';
+                $item = Item::where('full_name',$row['Item'])->first();
+                if (!$item) { dd("can't find item with full_name >".$row['Item']."<"); }
+
+                $routine = Routine::firstOrCreate([
+                    'section_id'  => $section->id,
+                    'team_id'     => $team->id,
+                    'item_id'     => $item->id,
+                    'sequence'    => $row['Routine'],
+                    'music_title' => $row['Music'],                    
+                ]);
 
             }
 

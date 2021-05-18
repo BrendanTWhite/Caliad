@@ -9,6 +9,11 @@ class Team extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'cohort_id', 
+        'team_rank_id',
+    ];
+
 
     public function cohort()
     {
