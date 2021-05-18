@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CompetitionDivisionTable extends Migration
+class CreateCompetitionItemTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,10 @@ class CompetitionDivisionTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('competition_item', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +26,6 @@ class CompetitionDivisionTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('competition_item');
     }
 }

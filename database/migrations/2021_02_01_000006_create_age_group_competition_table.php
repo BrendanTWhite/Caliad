@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CompetitionTeamRankTable extends Migration
+class CreateAgeGroupCompetitionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,10 @@ class CompetitionTeamRankTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('age_group_competition', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +26,6 @@ class CompetitionTeamRankTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('age_group_competition');
     }
 }
