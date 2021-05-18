@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class TeamRank extends Model
 {
     use HasFactory;
+
+
+    public function teams()
+    {
+        return $this->hasMany(Teams::class);
+    }
+     
 }
