@@ -6,6 +6,7 @@ use App\Models\Routine;
 use Illuminate\Http\Request;
 
 use Carbon\Carbon;
+use DB;
 
 use App\Models\Competition;
 use App\Models\Session;
@@ -94,6 +95,92 @@ class RoutineController extends Controller
                     'sequence'    => $row['Routine'],
                     'music_title' => $row['Music'],                    
                 ]);
+
+
+
+                // now the many-many table joins
+                // we don't have models for these (yet) so we'll just do DB inserts
+
+                DB::table('age_group_competition')->insert([
+                    'competition_id' => $competition->id,
+                    'age_group_id'   => $age_group->id,
+                ]);
+
+                DB::table('competition_item')->insert([
+                    'competition_id' => $competition->id,
+                    'item_id'        => $item->id,
+                ]);
+
+                DB::table('competition_region')->insert([
+                    'competition_id' => $competition->id,
+                    'region_id'      => $club->region_id,
+                ]);
+
+                DB::table('competition_team_rank')->insert([
+                    'competition_id' => $competition->id,
+                    'team_rank_id'   => $team->team_rank->id,
+                ]);
+
+                DB::table('competition_division')->insert([
+                    'competition_id' => $competition->id,
+                    'division_id' => $division->id,
+                ]);
+
+                DB::table('age_group_session')->insert([
+                    'session_id' => $session->id,
+                    'age_group_id' => $age_group->id,
+                ]);
+
+                DB::table('item_session')->insert([
+                    'session_id' => $session->id,
+                    'item_id' => $item->id,
+                ]);
+
+                DB::table('region_session')->insert([
+                    'session_id' => $session->id,
+                    'region_id' => $club->region_id,
+                ]);
+
+                DB::table('session_team_rank')->insert([
+                    'session_id' => $session->id,
+                    'team_rank_id' => $team->team_rank->id,
+                ]);
+
+                DB::table('division_session')->insert([
+                    'session_id' => $session->id,
+                    'division_id' => $division->id,
+                ]);
+
+                DB::table('age_group_section')->insert([
+                    'section_id' => $section->id,
+                    'age_group_id' => $age_group->id,
+                ]);
+
+                DB::table('item_section')->insert([
+                    'section_id' => $section->id,
+                    'item_id' => $item->id,
+                ]);
+
+                DB::table('region_section')->insert([
+                    'section_id' => $section->id,
+                    'region_id' => $club->region_id,
+                ]);
+
+                DB::table('section_team_rank')->insert([
+                    'section_id' => $section->id,
+                    'team_rank_id' => $team->team_rank->id,
+                ]);
+
+                DB::table('division_section')->insert([
+                    'section_id' => $section->id,
+                    'division_id' => $division->id,
+                ]);
+
+                DB::table('item_team')->insert([
+                    'team_id' => $team->id,
+                    'item_id' => $item->id,
+                ]);
+
 
             }
 
