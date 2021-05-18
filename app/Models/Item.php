@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     use HasFactory;
-    
+
 
     public function item_type()
     {
@@ -21,4 +21,26 @@ class Item extends Model
         return $this->hasMany(Routine::class);
     }
 
+
+
+    public function teams()
+    {
+        return $this->belongsToMany(Team::class);
+    }  
+
+
+
+    public function competition()
+    {
+        return $this->belongsToMany(Competition::class);
+    }  
+    public function session()
+    {
+        return $this->belongsToMany(Session::class);
+    }  
+    public function section()
+    {
+        return $this->belongsToMany(Section::class);
+    }  
+    
 }

@@ -23,6 +23,13 @@ class Team extends Model
     public function routines()
     {
         return $this->hasMany(Routine::class);
-    }    
+    }   
+
+
+
+    public function items()
+    {
+        return $this->belongsToMany(Item::class);
+    }     
 
 }

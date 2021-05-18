@@ -16,4 +16,19 @@ class AgeGroup extends Model
         return $this->hasMany(Cohort::class);
     }  
 
+
+
+    public function competition()
+    {
+        return $this->belongsToMany(Competition::class);
+    }  
+    public function session()
+    {
+        return $this->belongsToMany(Session::class);
+    }  
+    public function section()
+    {
+        return $this->belongsToMany(Section::class);
+    }  
+    
 }
