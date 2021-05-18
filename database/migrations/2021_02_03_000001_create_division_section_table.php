@@ -15,6 +15,10 @@ class CreateDivisionSectionTable extends Migration
     {
         Schema::create('division_section', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('section_id')->constrained();
+            $table->foreignId('division_id')->constrained();
+
             $table->timestamps();
         });
     }

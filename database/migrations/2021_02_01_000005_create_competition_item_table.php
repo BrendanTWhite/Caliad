@@ -15,6 +15,10 @@ class CreateCompetitionItemTable extends Migration
     {
         Schema::create('competition_item', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('competition_id')->constrained();
+            $table->foreignId('item_id')->constrained();
+
             $table->timestamps();
         });
     }

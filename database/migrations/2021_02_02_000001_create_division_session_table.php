@@ -15,6 +15,10 @@ class CreateDivisionSessionTable extends Migration
     {
         Schema::create('division_session', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('session_id')->constrained();
+            $table->foreignId('division_id')->constrained();
+
             $table->timestamps();
         });
     }

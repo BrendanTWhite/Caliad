@@ -15,6 +15,10 @@ class CreateSectionTeamRankTable extends Migration
     {
         Schema::create('section_team_rank', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('section_id')->constrained();
+            $table->foreignId('team_rank_id')->constrained();
+
             $table->timestamps();
         });
     }

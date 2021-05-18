@@ -15,6 +15,10 @@ class CreateAgeGroupSessionTable extends Migration
     {
         Schema::create('age_group_session', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('session_id')->constrained();
+            $table->foreignId('age_group_id')->constrained();
+
             $table->timestamps();
         });
     }

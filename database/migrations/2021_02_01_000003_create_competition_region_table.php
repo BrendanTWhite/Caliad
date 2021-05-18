@@ -15,6 +15,10 @@ class CreateCompetitionRegionTable extends Migration
     {
         Schema::create('competition_region', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('competition_id')->constrained();
+            $table->foreignId('region_id')->constrained();
+
             $table->timestamps();
         });
     }

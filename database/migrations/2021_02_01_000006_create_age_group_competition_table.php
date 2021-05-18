@@ -15,6 +15,10 @@ class CreateAgeGroupCompetitionTable extends Migration
     {
         Schema::create('age_group_competition', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('competition_id')->constrained();
+            $table->foreignId('age_group_id')->constrained();
+
             $table->timestamps();
         });
     }

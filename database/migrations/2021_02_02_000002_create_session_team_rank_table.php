@@ -15,6 +15,10 @@ class CreateSessionTeamRankTable extends Migration
     {
         Schema::create('session_team_rank', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('session_id')->constrained();
+            $table->foreignId('team_rank_id')->constrained();
+
             $table->timestamps();
         });
     }

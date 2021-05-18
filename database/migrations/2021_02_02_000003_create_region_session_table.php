@@ -15,6 +15,10 @@ class CreateRegionSessionTable extends Migration
     {
         Schema::create('region_session', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('session_id')->constrained();
+            $table->foreignId('region_id')->constrained();
+
             $table->timestamps();
         });
     }

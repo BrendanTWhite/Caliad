@@ -15,6 +15,10 @@ class CreateItemTeamTable extends Migration
     {
         Schema::create('item_team', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('team_id')->constrained();
+            $table->foreignId('item_id')->constrained();
+
             $table->timestamps();
         });
     }

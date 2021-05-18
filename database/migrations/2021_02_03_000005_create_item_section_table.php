@@ -15,6 +15,10 @@ class CreateItemSectionTable extends Migration
     {
         Schema::create('item_section', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('section_id')->constrained();
+            $table->foreignId('item_id')->constrained();
+
             $table->timestamps();
         });
     }

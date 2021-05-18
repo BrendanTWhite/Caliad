@@ -15,6 +15,10 @@ class CreateItemSessionTable extends Migration
     {
         Schema::create('item_session', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('session_id')->constrained();
+            $table->foreignId('item_id')->constrained();
+
             $table->timestamps();
         });
     }
