@@ -19,6 +19,8 @@ class CreateItemTeamTable extends Migration
             $table->foreignId('team_id')->constrained();
             $table->foreignId('item_id')->constrained();
 
+            $table->unique(['team_id', 'item_id']);
+
             $table->timestamps();
         });
     }

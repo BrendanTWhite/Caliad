@@ -19,6 +19,8 @@ class CreateDivisionSectionTable extends Migration
             $table->foreignId('section_id')->constrained();
             $table->foreignId('division_id')->constrained();
 
+            $table->unique(['section_id', 'division_id']);
+
             $table->timestamps();
         });
     }

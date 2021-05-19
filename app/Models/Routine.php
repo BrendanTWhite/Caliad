@@ -8,6 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Routine extends Model
 {
     use HasFactory;
+    
+    protected $fillable = [
+        'section_id', 
+        'team_id', 
+        'item_id', 
+        'sequence', 
+        'music_title', 
+    ];
 
 
     public function section()

@@ -9,6 +9,12 @@ class Cohort extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'club_id', 
+        'age_group_id', 
+        'year_id', 
+        'division_id',
+    ];
 
 
     public function club()

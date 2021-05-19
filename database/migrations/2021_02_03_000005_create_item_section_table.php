@@ -19,6 +19,8 @@ class CreateItemSectionTable extends Migration
             $table->foreignId('section_id')->constrained();
             $table->foreignId('item_id')->constrained();
 
+            $table->unique(['section_id', 'item_id']);
+
             $table->timestamps();
         });
     }

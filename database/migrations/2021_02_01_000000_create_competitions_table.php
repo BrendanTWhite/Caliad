@@ -22,6 +22,8 @@ class CreateCompetitionsTable extends Migration
             $table->date('start_date');
             $table->date('end_date');
 
+            $table->unique(['name', 'year_id']);
+
             $table->timestamps();
         });
 
@@ -31,11 +33,13 @@ class CreateCompetitionsTable extends Migration
         DB::table('competitions')->insert([
 
             [
+                'id'         => 1, // May is ID 1
                 'year_id'    => 2, // this is 2021
                 'name'       => 'May 2021 Competitions', 
                 'start_date' => '2021-05-10', 
                 'end_date'   => '2021-05-28',
             ], [
+                'id'         => 2, // Aug is ID 1
                 'year_id'    => 2, // this is 2021
                 'name'       => '2021 State Championship', 
                 'start_date' => '2021-07-30', 

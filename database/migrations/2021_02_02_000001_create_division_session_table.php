@@ -19,6 +19,8 @@ class CreateDivisionSessionTable extends Migration
             $table->foreignId('session_id')->constrained();
             $table->foreignId('division_id')->constrained();
 
+            $table->unique(['session_id', 'division_id']);
+
             $table->timestamps();
         });
     }

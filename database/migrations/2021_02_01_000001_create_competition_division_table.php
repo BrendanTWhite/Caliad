@@ -19,6 +19,8 @@ class CreateCompetitionDivisionTable extends Migration
             $table->foreignId('competition_id')->constrained();
             $table->foreignId('division_id')->constrained();
 
+            $table->unique(['competition_id', 'division_id']);
+
             $table->timestamps();
         });
     }

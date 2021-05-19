@@ -2,20 +2,20 @@
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Competitions') }}
+            {{ __('Routines') }}
         </h2>
     </x-slot>
 
 
- @foreach ($competitions as $competition)
+ @foreach ($routines as $routine)
 
 
   <!-- Header -->
   <div class="mt-10 max-w-screen-xl mx-auto px-10">
     <h2 class="text-gray-900 text-2xl font-bold leading-snug"> 
-      {{ $competition->name }} 
+      {{ $routine->sequence }} 
       <div class="text-sm">
-        {{ $competition->start_date->toFormattedDateString() }} - {{ $competition->end_date->toFormattedDateString() }} 
+        {{ $routine->section_id }} - {{ $routine->team_id }} 
       </div>
     </h2>
   </div>
@@ -28,25 +28,25 @@
 >
   
   
-   @foreach ($competition->sessions as $session)
+  
   <!-- Grid column -->
   <div class="flex flex-col flex-1 px-10 py-12 bg-white rounded-lg shadow-lg">
     <div class="flex-1">
       <h2 class="text-gray-900 text-2xl font-bold leading-snug">
-        {{ $session->start->toDayDateTimeString() }} 
+        One
       </h2>
       <p class="mt-2 text-lg">
-        {{ $session->description() }} 
+        One.
       </p>
     </div>
     <a
       href="#"
       class="mt-6 inline-block px-6 py-3 text-center text-white font-semibold bg-blue-700 rounded-md shadow-sm"
     >
-      Open
+      One
     </a>
   </div>
-@endforeach
+
 
   
   

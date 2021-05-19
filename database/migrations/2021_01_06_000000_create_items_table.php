@@ -18,9 +18,9 @@ class CreateItemsTable extends Migration
 
             $table->foreignId('item_type_id')->constrained();
 
-            $table->string('full_name');
-            $table->string('short_name');
-            $table->integer('sort_order');
+            $table->string('full_name')->unique();
+            $table->string('short_name')->unique();
+            $table->integer('sort_order')->unique();
 
 
             $table->timestamps();

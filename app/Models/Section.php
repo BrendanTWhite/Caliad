@@ -9,6 +9,9 @@ class Section extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['session_id', 'sequence'];
+
+
 
     public function session()
     {
