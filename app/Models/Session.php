@@ -21,26 +21,23 @@ class Session extends Model
             return $this->name;
         } else {
 
-            $text = '';
+            $text = collect([]);  // start with an empty collection
             
             // want age group(s), division(s), team rank(s)
             
             if ($this->age_groups) {
-                $text .= $this->age_groups->unique->get()->implode('name', ', ')
-                    .' ';
+                $text->push($this->age_groups->implode('name', ' & '));
             }
 
             if ($this->divisions) {
-                $text .= $this->divisions->unique->get()->implode('full_name', ', ')
-                    .' ';
+                $text->push($this->divisions->implode('full_name', ' & '));
             }
 
             if ($this->team_ranks) {
-                $text .= 'Team ' . $this->team_ranks->unique->get()->implode('id', ', ')
-                    .' ';
+                $text->push('Team ' . $this->team_ranks->implode('id', ' & '));
             }
 
-            return $text;
+            return $text->implode(', ');
         }
     }
 
