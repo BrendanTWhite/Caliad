@@ -14,7 +14,7 @@ class CompetitionController extends Controller
      */
     public function index()
     {
-        return view('competitions.list', [
+        return view('competitions.index', [
             'competitions' => Competition::with([
                 'sessions', 
                 'sessions.divisions',
