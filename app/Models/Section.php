@@ -17,19 +17,19 @@ class Section extends Model
         
         // want age group(s), item(s), division(s), team rank(s)
         
-        if ($this->age_groups) {
+        if ($this->age_groups->isNotEmpty()) {
             $text->push($this->age_groups->implode('name', ' & '));
         }
 
-        if ($this->items) {
+        if ($this->items->isNotEmpty()) {
             $text->push($this->items->implode('full_name', ' & '));
         }
 
-        if ($this->divisions) {
+        if ($this->divisions->isNotEmpty()) {
             $text->push($this->divisions->implode('full_name', ' & '));
         }
 
-        if ($this->team_ranks) {
+        if ($this->team_ranks->isNotEmpty()) {
             $text->push('Team ' . $this->team_ranks->implode('id', ' & '));
         }
 

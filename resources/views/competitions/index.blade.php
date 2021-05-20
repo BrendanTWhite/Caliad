@@ -36,11 +36,11 @@
         {{ $session->start->toDayDateTimeString() }} 
       </h2>
       <p class="mt-2 text-lg">
-        {{ $session->description() }} 
+        {{ $session->description }} 
       </p>
     </div>
     <a
-      href="#"
+      href="{{ route('sessions.show', ['session' => $session]) }}"
       class="mt-6 inline-block px-6 py-3 text-center text-white font-semibold bg-blue-700 rounded-md shadow-sm"
     >
       Open

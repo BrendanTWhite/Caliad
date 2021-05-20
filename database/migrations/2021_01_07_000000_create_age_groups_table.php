@@ -26,9 +26,9 @@ class CreateAgeGroupsTable extends Migration
         // rarely if ever changes
 
         DB::table('age_groups')->insert([
-            [ 'sort_order' => 110, 'name' => 'Non Competitive Tinies ' ],
-            [ 'sort_order' => 120, 'name' => 'Competitive Tinies ' ],
-            [ 'sort_order' => 130, 'name' => 'Sub Juniors ' ],
+            [ 'sort_order' => 110, 'name' => 'Non Competitive Tinies' ],
+            [ 'sort_order' => 120, 'name' => 'Competitive Tinies' ],
+            [ 'sort_order' => 130, 'name' => 'Sub Juniors' ],
             [ 'sort_order' => 140, 'name' => 'Juniors' ],
             [ 'sort_order' => 150, 'name' => 'Intermediates' ],
             [ 'sort_order' => 160, 'name' => 'Seniors' ],
