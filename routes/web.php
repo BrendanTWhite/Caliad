@@ -28,7 +28,7 @@ Route::get('/potato', function () {
 })->middleware(['auth'])->name('potato');
 
 Route::resource('competitions', CompetitionController::class);
-
+Route::resource('sessions', SessionController::class);
 Route::resource('routines', RoutineController::class);
 
 require __DIR__.'/auth.php';
