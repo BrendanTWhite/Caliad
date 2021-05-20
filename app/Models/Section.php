@@ -10,19 +10,19 @@ class Section extends Model
     use HasFactory;
 
 
-    public function description() 
+    public function getDescriptionAttribute()
     {
         
         $text = collect([]);  // start with an empty collection
         
-        // want age group(s), division(s), team rank(s)
+        // want age group(s), item(s), division(s), team rank(s)
         
         if ($this->age_groups) {
             $text->push($this->age_groups->implode('name', ' & '));
         }
 
         if ($this->items) {
-            $text->push($this->items->implode('name', ' & '));
+            $text->push($this->items->implode('full_name', ' & '));
         }
 
         if ($this->divisions) {
@@ -61,19 +61,19 @@ class Section extends Model
     {
         return $this->belongsToMany(Division::class);
     }  
-    public function team_rank()
+    public function team_ranks()
     {
         return $this->belongsToMany(TeamRank::class);
     }  
-    public function region()
+    public function regions()
     {
         return $this->belongsToMany(Region::class);
     }  
-    public function item()
+    public function items()
     {
         return $this->belongsToMany(Item::class);
     }  
-    public function age_group()
+    public function age_groups()
     {
         return $this->belongsToMany(AgeGroup::class);
     }  

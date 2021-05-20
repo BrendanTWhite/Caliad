@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompetitionController;
 use App\Http\Controllers\RoutineController;
+use App\Http\Controllers\SessionController;
 
 /*
 |--------------------------------------------------------------------------
