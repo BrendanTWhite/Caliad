@@ -9,6 +9,35 @@ class Section extends Model
 {
     use HasFactory;
 
+
+    public function description() 
+    {
+        
+        $text = collect([]);  // start with an empty collection
+        
+        // want age group(s), division(s), team rank(s)
+        
+        if ($this->age_groups) {
+            $text->push($this->age_groups->implode('name', ' & '));
+        }
+
+        if ($this->items) {
+            $text->push($this->items->implode('name', ' & '));
+        }
+
+        if ($this->divisions) {
+            $text->push($this->divisions->implode('full_name', ' & '));
+        }
+
+        if ($this->team_ranks) {
+            $text->push('Team ' . $this->team_ranks->implode('id', ' & '));
+        }
+
+        return $text->implode(', ');
+    
+    }
+
+
     protected $fillable = ['session_id', 'sequence'];
 
 
