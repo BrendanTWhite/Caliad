@@ -43,7 +43,7 @@
                   </td>
                   <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                     @isset($routine->start)
-                    {{ $routine->start->isoFormat('h:mm:ss a') }}                  
+                    {{ $routine->start->isoFormat('h:mm') }}                  
                     @endisset
                   </td>
                   <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
@@ -65,7 +65,7 @@
                   </td>
                   <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                     @isset($routine->end)
-                    {{ $routine->end->isoFormat('h:mm:ss a') }}                  
+                    {{ $routine->end->isoFormat('h:mm') }}                  
                     @endisset
                   </td>
                   <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
