@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Routine extends Model
 {
     use HasFactory;
+
+    protected $dates = [
+        'start',
+        'end'
+    ];
     
     protected $fillable = [
         'section_id', 

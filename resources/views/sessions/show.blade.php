@@ -21,38 +21,73 @@
 
 
 
-<!-- Layout largely stolen from https://laravel-news.com/tailwind-css-tips-and-tricks -->
+ 
+<!-- Table from https://tailwindui.com/components/application-ui/lists/tables -->
+<!-- This example requires Tailwind CSS v2.0+ -->
+  <div class="mt-10 max-w-screen-xl mx-auto px-10">
 
-<!-- Container -->
-<div
-  class="mt-10 max-w-screen-xl mx-auto px-6 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
->
-  
+
+    <div class="flex flex-col">
+      <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+          <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            <table class="min-w-full divide-y divide-gray-200">
+              <tbody class="bg-white divide-y divide-gray-200">
+
   @foreach ($section->routines as $routine)
-  
-  <!-- Grid column -->
-  <div class="flex flex-col flex-1 px-10 py-12 bg-white rounded-lg shadow-lg">
-    <div class="flex-1">
-      <h2 class="text-gray-900 text-2xl font-bold leading-snug">
-        One
-      </h2>
-      <p class="mt-2 text-lg">
-        One.
-      </p>
-    </div>
-    <a
-      href="#"
-      class="mt-6 inline-block px-6 py-3 text-center text-white font-semibold bg-blue-700 rounded-md shadow-sm"
-    >
-      One
-    </a>
-  </div>
 
+                <tr>
+
+                  <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                    <a href="#" class="text-indigo-600 hover:text-indigo-900">Start</a>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                    @isset($routine->start)
+                    {{ $routine->start->isoFormat('h:mm:ss a') }}                  
+                    @endisset
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                    <a href="#" class="text-indigo-600 hover:text-indigo-900">Clear</a>
+                  </td>
+
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                    {{ $routine->sequence }}                  
+                    {{ $routine->team->cohort->club->short_name }}                  
+                    Team {{ $routine->team->team_rank->id }}                            
+                  </td>
+
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                    {{ $routine->music_title }}                  
+                  </td>
+
+                  <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                    <a href="#" class="text-indigo-600 hover:text-indigo-900">Clear</a>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                    @isset($routine->end)
+                    {{ $routine->end->isoFormat('h:mm:ss a') }}                  
+                    @endisset
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                    <a href="#" class="text-indigo-600 hover:text-indigo-900">End</a>
+                  </td>
+
+                </tr>
 
   @endforeach
-  
-  
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
+
+
+
+  
+
 
 @endforeach
 
