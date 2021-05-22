@@ -5,6 +5,9 @@
 
     RewriteEngine On
 
+    # See https://support.tigertech.net/subdomains#subdomains-and-jmp
+    RewriteBase /
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
