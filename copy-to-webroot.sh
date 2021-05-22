@@ -15,6 +15,8 @@ myline=$(cat .env | grep "LINK_PUBLIC_TO=")
 # ...and strip out the key
 mydirectory=${myline:keylength}
 
+echo "About to start..."
+
 # Then loop through all files in the public directory and link them
 for orig_file_and_path in $public_directory*
 do
@@ -25,5 +27,9 @@ do
   # Remove old link (if it was there)
   rm -f $mydirectory$justfile
   # and finally link from the full path of the old file to the new location
+  echo "  Attempting to link from $fullpath to $mydirectory$justfile..."
   ln -s $fullpath $mydirectory$justfile
+  echo "  Done."
 done
+
+echo "All finished."
