@@ -9,6 +9,57 @@ class Routine extends Model
 {
     use HasFactory;
 
+
+    public function getCanRecordStartAttribute(): bool {
+
+        /* 
+
+        TODO: need to check:
+        Is logged in?
+        User has permissions to do this thing?
+        Is it reasonable to do this thing now - that is, has a later item already started?
+
+
+        Until we do all that, though...
+        ...just return false so they can't do nuttin
+
+        */
+
+        return false;
+
+    }
+
+    public function getCanRecordEndAttribute(): bool {
+
+        // TODO: see above
+
+        // return false for now
+
+        return false;
+
+    }
+
+    public function getCanClearStartAttribute(): bool {
+
+        // TODO: see above
+
+        // return false for now
+
+        return false;
+
+    }
+
+    public function getCanClearEndAttribute(): bool {
+
+        // TODO: see above
+
+        // return false for now
+
+        return false;
+
+    }
+
+
     protected $dates = [
         'start',
         'end'
