@@ -10,9 +10,10 @@ class Routine extends Model
     use HasFactory;
 
 
-    public function getCanRecordStartAttribute(): bool {
+    public function getCanRecordStartAttribute(): bool
+    {
 
-        /* 
+        /*
 
         TODO: need to check:
         Is logged in?
@@ -26,37 +27,36 @@ class Routine extends Model
         */
 
         return false;
-
     }
 
-    public function getCanRecordEndAttribute(): bool {
+    public function getCanRecordEndAttribute(): bool
+    {
 
         // TODO: see above
 
         // return false for now
 
         return false;
-
     }
 
-    public function getCanClearStartAttribute(): bool {
+    public function getCanClearStartAttribute(): bool
+    {
 
         // TODO: see above
 
         // return false for now
 
         return false;
-
     }
 
-    public function getCanClearEndAttribute(): bool {
+    public function getCanClearEndAttribute(): bool
+    {
 
         // TODO: see above
 
         // return false for now
 
         return false;
-
     }
 
 
@@ -64,13 +64,13 @@ class Routine extends Model
         'start',
         'end'
     ];
-    
+
     protected $fillable = [
-        'section_id', 
-        'team_id', 
-        'item_id', 
-        'sequence', 
-        'music_title', 
+        'section_id',
+        'team_id',
+        'item_id',
+        'sequence',
+        'music_title',
     ];
 
 
@@ -88,5 +88,4 @@ class Routine extends Model
     {
         return $this->belongsTo(Team::class);
     }
-
 }

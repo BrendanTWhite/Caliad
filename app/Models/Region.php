@@ -21,14 +21,13 @@ class Region extends Model
     public function competition()
     {
         return $this->belongsToMany(Competition::class);
-    }  
+    }
     public function session()
     {
         return $this->belongsToMany(Session::class);
-    }  
+    }
     public function section()
     {
         return $this->belongsToMany(Section::class);
-    }  
-    
+    }
 }

@@ -46,7 +46,7 @@ class SessionController extends Controller
      */
     public function show(Session $session)
     {
-        return view( 'sessions.show', compact('session') );
+        return view('sessions.show', compact('session'));
     }
 
     /**

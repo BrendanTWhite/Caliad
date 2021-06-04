@@ -4,10 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Routine;
 use Illuminate\Http\Request;
-
 use Carbon\Carbon;
 use DB;
-
 use App\Models\Competition;
 use App\Models\Session;
 use App\Models\Section;
@@ -18,7 +16,6 @@ use App\Models\Cohort;
 use App\Models\Team;
 use App\Models\Item;
 
-
 class RoutineController extends Controller
 {
     /**
@@ -27,30 +24,29 @@ class RoutineController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    { global $headers;
+    {
+        global $headers;
 
         $path = base_path('doco/caliad.csv');
 
-        $csv = collect(array_map('str_getcsv', file($path))); 
+        $csv = collect(array_map('str_getcsv', file($path)));
 
         $headers = collect($csv->shift());  // gets first row, which is probs header
 
-        $csv->transform(function ($row, $key) { // rename field titles with header row names
+        $csv->transform(function ($row, $key) {
+            // rename field titles with header row names
             global $headers;
             return $headers->combine($row);
         });
 
 
-        foreach($csv as $row) { 
-
+        foreach ($csv as $row) {
             //dd($row); // collection/array of a row of data
             //dd($row['comp-id']); // the competition id, eg 2
 
 
-            if ($row && $row['comp-id'] != '') 
-            { 
-                     
-                $competition = Competition::find($row['comp-id']);     
+            if ($row && $row['comp-id'] != '') {
+                $competition = Competition::find($row['comp-id']);
 
                 $session = Session::firstOrCreate([
                     'competition_id' => $competition->id,
@@ -62,16 +58,22 @@ class RoutineController extends Controller
                     'sequence'    => $row['ItemSeq'],
                 ]);
 
-                $club = Club::where('short_name',$row['ClubSlug'])->first();
-                if (!$club) { dd("can't find club with short_name >".$row['ClubSlug']."<"); }
+                $club = Club::where('short_name', $row['ClubSlug'])->first();
+                if (!$club) {
+                    dd("can't find club with short_name >" . $row['ClubSlug'] . "<");
+                }
 
-                $age_group = AgeGroup::where('name',$row['Age groups'])->first();
-                if (!$age_group) { dd("can't find age_group with name >".$row['Age groups']."<"); }
+                $age_group = AgeGroup::where('name', $row['Age groups'])->first();
+                if (!$age_group) {
+                    dd("can't find age_group with name >" . $row['Age groups'] . "<");
+                }
 
                 $year = $competition->year;
 
-                $division = Division::where('full_name',$row['DivisionName'])->first();
-                if (!$division) { dd("can't find division with full_name >".$row['DivisionName']."<"); }
+                $division = Division::where('full_name', $row['DivisionName'])->first();
+                if (!$division) {
+                    dd("can't find division with full_name >" . $row['DivisionName'] . "<");
+                }
 
                 $cohort = Cohort::firstOrCreate([
                     'club_id'      => $club->id,
@@ -85,15 +87,17 @@ class RoutineController extends Controller
                     'team_rank_id' => $row['Team'],
                 ]);
 
-                $item = Item::where('full_name',$row['Item'])->first();
-                if (!$item) { dd("can't find item with full_name >".$row['Item']."<"); }
+                $item = Item::where('full_name', $row['Item'])->first();
+                if (!$item) {
+                    dd("can't find item with full_name >" . $row['Item'] . "<");
+                }
 
                 $routine = Routine::firstOrCreate([
                     'section_id'  => $section->id,
                     'team_id'     => $team->id,
                     'item_id'     => $item->id,
                     'sequence'    => $row['Routine'],
-                    'music_title' => $row['Music'],                    
+                    'music_title' => $row['Music'],
                 ]);
 
 
@@ -180,10 +184,7 @@ class RoutineController extends Controller
                 } catch (\Illuminate\Database\QueryException $e) {
                     // if it already exists, just ignore and continue
                 }
-
-
             }
-
         }
 
 

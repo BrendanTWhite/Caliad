@@ -16,7 +16,7 @@ class CompetitionController extends Controller
     {
         return view('competitions.index', [
             'competitions' => Competition::with([
-                'sessions', 
+                'sessions',
                 'sessions.divisions',
                 'sessions.team_ranks',
                 'sessions.regions',

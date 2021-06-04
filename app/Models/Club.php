@@ -20,5 +20,4 @@ class Club extends Model
     {
         return $this->hasMany(Cohort::class);
     }
-
 }

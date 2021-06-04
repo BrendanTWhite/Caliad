@@ -10,7 +10,7 @@ class Team extends Model
     use HasFactory;
 
     protected $fillable = [
-        'cohort_id', 
+        'cohort_id',
         'team_rank_id',
     ];
 
@@ -28,13 +28,12 @@ class Team extends Model
     public function routines()
     {
         return $this->hasMany(Routine::class);
-    }   
+    }
 
 
 
     public function items()
     {
         return $this->belongsToMany(Item::class);
-    }     
-
+    }
 }

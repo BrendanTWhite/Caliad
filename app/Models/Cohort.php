@@ -10,9 +10,9 @@ class Cohort extends Model
     use HasFactory;
 
     protected $fillable = [
-        'club_id', 
-        'age_group_id', 
-        'year_id', 
+        'club_id',
+        'age_group_id',
+        'year_id',
         'division_id',
     ];
 
@@ -22,7 +22,7 @@ class Cohort extends Model
         return $this->belongsTo(Club::class);
     }
 
-    
+
 
     public function division()
     {
@@ -45,6 +45,5 @@ class Cohort extends Model
     public function teams()
     {
         return $this->hasMany(Team::class);
-    }    
-
+    }
 }

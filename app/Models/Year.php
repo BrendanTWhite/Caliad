@@ -19,7 +19,5 @@ class Year extends Model
     public function cohorts()
     {
         return $this->hasMany(Cohort::class);
-    }  
-
-
+    }
 }

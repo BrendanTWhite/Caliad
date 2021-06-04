@@ -17,14 +17,13 @@ class Session extends Model
 
     public function getDescriptionAttribute()
     {
-        if ($this->name) { 
+        if ($this->name) {
             return $this->name;
         } else {
-
             $text = collect([]);  // start with an empty collection
-            
+
             // want age group(s), division(s), team rank(s)
-            
+
             if ($this->age_groups->isNotEmpty()) {
                 $text->push($this->age_groups->implode('name', ' & '));
             }
@@ -67,22 +66,21 @@ class Session extends Model
     public function divisions()
     {
         return $this->belongsToMany(Division::class);
-    }  
+    }
     public function team_ranks()
     {
         return $this->belongsToMany(TeamRank::class);
-    }  
+    }
     public function regions()
     {
         return $this->belongsToMany(Region::class);
-    }  
+    }
     public function items()
     {
         return $this->belongsToMany(Item::class);
-    }  
+    }
     public function age_groups()
     {
         return $this->belongsToMany(AgeGroup::class);
-    }  
-    
+    }
 }

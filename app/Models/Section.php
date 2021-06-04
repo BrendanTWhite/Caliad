@@ -12,11 +12,11 @@ class Section extends Model
 
     public function getDescriptionAttribute()
     {
-        
+
         $text = collect([]);  // start with an empty collection
-        
+
         // want age group(s), item(s), division(s), team rank(s)
-        
+
         if ($this->age_groups->isNotEmpty()) {
             $text->push($this->age_groups->implode('name', ' & '));
         }
@@ -34,7 +34,6 @@ class Section extends Model
         }
 
         return $text->implode(', ');
-    
     }
 
 
@@ -51,7 +50,7 @@ class Section extends Model
     public function routines()
     {
         return $this->hasMany(Routine::class);
-    }    
+    }
 
 
 
@@ -60,23 +59,21 @@ class Section extends Model
     public function divisions()
     {
         return $this->belongsToMany(Division::class);
-    }  
+    }
     public function team_ranks()
     {
         return $this->belongsToMany(TeamRank::class);
-    }  
+    }
     public function regions()
     {
         return $this->belongsToMany(Region::class);
-    }  
+    }
     public function items()
     {
         return $this->belongsToMany(Item::class);
-    }  
+    }
     public function age_groups()
     {
         return $this->belongsToMany(AgeGroup::class);
-    }  
-
-
+    }
 }
