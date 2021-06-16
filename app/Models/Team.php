@@ -12,6 +12,7 @@ class Team extends Model
     protected $fillable = [
         'cohort_id',
         'team_rank_id',
+        'name',
     ];
 
 

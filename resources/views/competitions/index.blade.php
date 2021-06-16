@@ -28,7 +28,7 @@
 >
   
   
-   @foreach ($competition->sessions as $session)
+   @forelse ($competition->sessions as $session)
   <!-- Grid column -->
   <div class="flex flex-col flex-1 px-10 py-12 bg-white rounded-lg shadow-lg">
     <div class="flex-1">
@@ -46,7 +46,18 @@
       Open
     </a>
   </div>
-@endforeach
+@empty
+  <div class="flex flex-col flex-1 px-10 py-12 bg-white rounded-lg shadow-lg">
+    <div class="flex-1">
+      <h2 class="text-gray-900 text-2xl font-bold leading-snug">
+        Not yet available 
+      </h2>
+      <p class="mt-2 text-lg">
+        The sessions for {{ $competition->name }} are not yet available on Caliad
+      </p>
+    </div>
+  </div>
+@endforelse
 
   
   

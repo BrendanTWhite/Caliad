@@ -39,11 +39,17 @@ class CreateCompetitionsTable extends Migration
                 'start_date' => '2021-05-10', 
                 'end_date'   => '2021-05-28',
             ], [
-                'id'         => 2, // Aug is ID 1
+                'id'         => 2, // Aug is ID 2
                 'year_id'    => 2, // this is 2021
                 'name'       => '2021 State Championship', 
                 'start_date' => '2021-07-30', 
                 'end_date'   => '2021-08-29',
+            ], [
+                'id'         => 3, // PHCC MidYear is ID 3
+                'year_id'    => 2, // this is 2021
+                'name'       => '2021 PHCC Mid-Year', 
+                'start_date' => '2021-06-19', 
+                'end_date'   => '2021-06-19',
             ]
 
         ]);

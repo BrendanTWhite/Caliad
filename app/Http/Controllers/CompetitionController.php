@@ -22,7 +22,9 @@ class CompetitionController extends Controller
                 'sessions.regions',
                 'sessions.items',
                 'sessions.age_groups',
-            ])->get()
+            ])
+            ->orderBy('start_date','desc')
+            ->get()
         ]);
     }
 

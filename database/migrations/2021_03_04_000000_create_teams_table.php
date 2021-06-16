@@ -22,6 +22,8 @@ class CreateTeamsTable extends Migration
 
             $table->unique(['cohort_id', 'team_rank_id']);
 
+            $table->string('name')->nullable();
+
             $table->timestamps();
         });
 
