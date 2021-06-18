@@ -22,6 +22,11 @@ class Competition extends Model
         return $this->belongsTo(Year::class);
     }
 
+    public function comp_type()
+    {
+        return $this->belongsTo(CompType::class);
+    }
+
     public function sessions()
     {
         return $this->hasMany(Session::class);
