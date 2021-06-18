@@ -31,6 +31,7 @@ class CreateItemTypesTable extends Migration
             [ 'sort_order' => 100, 'has_music_title' => FALSE, 'name' => 'Core' ],
             [ 'sort_order' => 200, 'has_music_title' => TRUE,  'name' => 'Fancy' ],
             [ 'sort_order' => 300, 'has_music_title' => TRUE,  'name' => 'Solos / Duos' ],
+            [ 'sort_order' => 999, 'has_music_title' => FALSE, 'name' => 'Admin' ],
         ]);
 
     }

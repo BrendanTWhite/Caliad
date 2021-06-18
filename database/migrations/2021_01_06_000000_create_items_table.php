@@ -32,6 +32,13 @@ class CreateItemsTable extends Migration
         DB::table('items')->insert([
 
             [ 
+                'item_type_id' => 4, 
+                'full_name' => 'Administrative', 
+                'short_name' => 'Admin',  
+                'sort_order' => 9999,  
+            ], 
+
+            [ 
                 'item_type_id' => 1, 
                 'full_name' => 'Figure March', 
                 'short_name' => 'March',  

@@ -1,0 +1,89 @@
+CONCERT 1 PROGRAM
+1	Song and Action	Tinies Gold
+2	March	Tinies Navy
+3	Rods	Tinies White
+4	Exercises	Sparkles
+5	Aesthetic	Tinkerbells
+6	Exercises	Tinies Gold
+7	Exercises	Tinies Navy
+8	Song and Action	Tinies White
+9	March	Sparkles
+10	Exercises	Tinkerbells
+11	Rods	Tinies Navy
+12	March	Tinies Gold
+13	Exercises	Tinies White
+14	Dance	Sparkles
+15	March	Tinkerbells
+16	Rods	Tinies Gold
+17	March	Tinies White
+18	Song and Action	Tinies Navy
+
+
+
+CONCERT 2 PROGRAM
+1	March	Seniors
+2	Song and Dance.	Sub-Junior Navy
+3	Clubs 	Masters 1
+4	Exercises	Sub-Junior Gold
+5	Rods	Masters 2
+6	March	Sub-Junior White
+7	Exercises	Seniors
+8	Clubs	Sub-Junior Navy
+9	Calisthenic Revue	Masters
+10	Rods	Sub-Junior Gold
+11	Song and Dance..Sub-Junior White
+12	Clubs	Seniors
+13	March	Sub-Junior Navy
+14	Exercises	Masters
+15	Clubs 	Sub-Junior Gold
+16	Rods	Sub-Junior White
+17	Rhythmical Aesthetic	Seniors
+18	Exercises	Sub-Junior Navy
+19	Rods	Masters 1
+20	March	Sub-Junior Gold
+21	Clubs 	Sub-Junior White
+22	Rods	Seniors
+23	Clubs	Masters 2
+24	Song and Dance..Sub-Junior Gold
+25	Exercises	Sub-Junior White
+26	Rods	Sub-Junior Navy
+PUPIL SKILLS PRESENTATION
+27	March	Masters
+28	Calisthenic Revue	Seniors
+
+
+
+
+CONCERT 3 PROGRAM
+WELCOME AND PUPIL SKILLS PRESENTATION
+1	Dance Arrangement	Junior 1
+2	Exercises	Intermediate 1
+3	Dance Arrangement	Junior 2
+4	Exercises	Intermediate 2
+5	March	Junior 3
+6	Rods	Junior 1
+7	Clubs	Intermediate 1
+8	Rods	Junior 2
+9	Clubs	Intermediate 2
+10	Aesthetic	Junior 3
+11	March	Junior 1
+12	Rhythmical Aesthetic	Intermediate 1
+13	Aesthetic	Junior 2
+14	Rhythmical Aesthetic	Intermediate 2
+15	Clubs	Junior 4
+16	Aesthetic	Junior 1
+17	Clubs	Junior 3
+18	March	Junior 2
+19	Rods	Intermediate2
+20	Exercises	Junior 3
+21	Rods	Intermediate1
+22	Clubs	Junior 2
+23	Rods	Junior 3
+24	Clubs	Junior 1
+25	Rods	Junior 4
+26	Aesthetic	Intermediates
+RAFFLE DRAW
+27	Exercises	Junior 2
+28	Exercises	Junior 1
+29	Dance Arrangement	Junior 3
+30	March	Intermediates
